@@ -1,0 +1,45 @@
+# config files
+base/src/main/resources/application-local.properties
+
+# java
+target*/
+log
+search-indices/
+
+# eclipse
+.project
+.classpath
+
+# vscode
+.settings
+.factorypath
+.vscode
+
+# idea
+.idea/
+*.iml
+
+# neovim
+.gitlab.nvim
+
+# netbeans
+nbactions.xml
+nb-configuration.xml
+
+# macos
+.DS_Store
+
+# gradle
+.gradle
+**/build/
+**/bin/
+!src/**/build/
+# Ignore Gradle GUI config
+gradle-app.setting
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+# Cache of project
+.gradletasknamecache
+
