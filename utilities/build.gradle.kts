@@ -6,6 +6,15 @@
 
 plugins {
     id("buildlogic.java-library-conventions")
+    `java-test-fixtures`
+}
+
+sourceSets {
+    testFixtures {
+        java {
+            srcDir("src/testFixtures/java")
+        }
+    }
 }
 
 dependencies {

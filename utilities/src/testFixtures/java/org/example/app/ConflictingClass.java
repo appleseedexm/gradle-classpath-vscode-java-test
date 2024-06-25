@@ -4,6 +4,6 @@ public class ConflictingClass {
 
 
     public String getMessage() {
-        return "message";
+        return "wrong message";
     }
 }
