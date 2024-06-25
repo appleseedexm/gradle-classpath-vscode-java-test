@@ -1,27 +1,23 @@
 package org.example.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import org.example.utilities.StringUtils;
 import org.junit.jupiter.api.Test;
 
 class MessageUtilsTest {
+
   @Test
-  void testGetMessage() {
-    assertEquals("Hello      World!", MessageUtils.getMessage());
+  void test_ConflictingClass_fromTest_shouldFail() {
+    var conflict = new ConflictingClass();
+
+    assertNotEquals("test", conflict.getMessage());
   }
 
   @Test
-  void testConflictingClass() {
-      var t = new ConflictingClass();
-      System.out.println("testConflictingClass");
-      System.out.println(t.getMessage());
-      
-    assertEquals("wrong message", t.getMessage());
-  }
+  void test_ConflictingClass_fromTestFixtures() {
+    var conflict = new ConflictingClass();
 
-  @Test
-  void testWithStringUtils() {
-    assertEquals("test", StringUtils.test());
+    assertEquals("testFixtures", conflict.getMessage());
   }
 }
